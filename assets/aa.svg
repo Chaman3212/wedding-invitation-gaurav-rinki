@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 420" role="img" aria-label="Placeholder for Rinki's photograph">
+  <defs>
+    <linearGradient id="m" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF8F4"/>
+      <stop offset="1" stop-color="#F0D2CF"/>
+    </linearGradient>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F3E2B4"/>
+      <stop offset="1" stop-color="#8C6230"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="420" fill="url(#m)"/>
+  <circle cx="46" cy="56" r="22" fill="#fff" opacity=".7"/>
+  <circle cx="262" cy="84" r="16" fill="#D9A6A3" opacity=".7"/>
+  <circle cx="54" cy="360" r="20" fill="#fff" opacity=".65"/>
+  <path d="M150 124c20 0 34 16 34 36 0 14-7 25-16 31 22 10 40 28 44 54 3 18-10 32-28 34H116c-18-2-31-16-28-34 4-26 22-44 44-54-9-6-16-17-16-31 0-20 14-36 34-36z" fill="#4A1718"/>
+  <path d="M96 268c18-24 90-24 108 0l14 92H82z" fill="#7A3040"/>
+  <path d="M150 150c22 18 40 8 48-8-20 2-34 12-48 28-14-16-28-26-48-28 8 16 26 26 48 8z" fill="#F7EDDA" opacity=".85"/>
+  <path d="M126 292h48" stroke="#D9B66E" stroke-width="3"/>
+  <circle cx="150" cy="92" r="18" fill="none" stroke="url(#g)" stroke-width="3"/>
+  <text x="150" y="390" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#591923" letter-spacing="1.5">PHOTOGRAPH AWAITED</text>
+</svg>

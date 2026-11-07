@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Gaurav &amp; Rinki | Royal Wedding Invitation</title>
+    <meta
+      name="description"
+      content="Royal Rajasthani Hindu wedding invitation of Gaurav and Rinki. Varmala on 11 December 2026 at 10:00 PM IST, Bhatan, Kosi Kalan, Mathura."
+    />
+    <meta name="theme-color" content="#3A1016" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Great+Vibes&family=Noto+Serif+Devanagari:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preload" as="image" href="assets/ganesh-darshan.jpg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="is-opening">
+    <div class="progress" id="progress"></div>
+    <div class="petal-layer" id="petal-layer"></div>
+
+    <header class="topbar">
+      <button
+        class="icon-btn"
+        id="menu-btn"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        Menu
+      </button>
+
+      <p class="brand">Gaurav <span>♥</span> Rinki</p>
+
+      <nav class="desk-nav" aria-label="Sections">
+        <a href="#darshan">Darshan</a>
+        <a href="#invitation">Invitation</a>
+        <a href="#couple">Couple</a>
+        <a href="#countdown">Countdown</a>
+        <a href="#events">Events</a>
+        <a href="#venues">Venues</a>
+      </nav>
+
+      <button
+        class="icon-btn music-btn"
+        id="music-btn"
+        aria-pressed="false"
+        aria-label="Play ambient wedding music"
+      >
+        <span class="music-mark"></span>
+        <span class="music-label">Music</span>
+      </button>
+    </header>
+
+    <nav class="site-nav" id="site-nav" hidden>
+      <button class="nav-close" id="nav-close">Close</button>
+      <p class="nav-kicker" lang="hi">शुभ विवाह</p>
+      <a href="#darshan">Ganesh Darshan</a>
+      <a href="#invitation">Invitation</a>
+      <a href="#couple">The Couple</a>
+      <a href="#countdown">Countdown</a>
+      <a href="#events">Wedding Events</a>
+      <a href="#royal">Seven Pheras</a>
+      <a href="#venues">Venues</a>
+      <a href="#closing">Blessings</a>
+    </nav>
+
+    <!-- LIGHT IVORY ENVELOPE OPENING -->
+    <div
+      class="opening envelope-opening"
+      id="opening"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div class="opening-sheen"></div>
+      <div class="spark-field" id="opening-sparks"></div>
+      <div class="opening-petals" id="opening-petals"></div>
+
+      <div class="opening-inner envelope-opening-inner">
+        <div class="mantra-lockup envelope-heading">
+          <p class="mantra" lang="hi">॥ श्री गणेशाय नमः ॥</p>
+          <p class="envelope-kicker">A WEDDING INVITATION</p>
+        </div>
+
+        <div class="envelope-stage">
+          <span class="envelope-flower flower-a">✿</span>
+          <span class="envelope-flower flower-b">❀</span>
+          <span class="envelope-flower flower-c">✿</span>
+
+          <button class="envelope" id="envelope-open" type="button">
+            <span class="envelope-back"></span>
+
+            <span class="invitation-insert">
+              <span class="insert-ganesh">
+                <img src="assets/ganesh-darshan.jpg" alt="Lord Ganesha" />
+              </span>
+
+              <span class="insert-mantra" lang="hi">शुभ विवाह</span>
+              <span class="insert-names">Gaurav <i>&amp;</i> Rinki</span>
+              <span class="insert-caption">YOU ARE CORDIALLY INVITED</span>
+            </span>
+
+            <span class="envelope-front"></span>
+            <span class="envelope-flap"></span>
+
+            <span class="wax-seal"><span>ॐ</span></span>
+            <span class="envelope-monogram">G <i>♥</i> R</span>
+          </button>
+
+          <p class="envelope-hint" id="envelope-hint">
+            Tap the seal to open your invitation
+          </p>
+        </div>
+
+        <div class="opening-foot envelope-foot">
+          <button class="enter-btn" id="enter-btn">
+            Enter the celebration <span>→</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <!-- GANESH DARSHAN -->
+      <section class="section marble" id="darshan">
+        <div class="garland"></div>
+
+        <div class="wrap reveal">
+          <p class="bell-row bells-dark"><i></i><i></i><i></i><i></i><i></i></p>
+
+          <p class="eyebrow" lang="hi" data-words>॥ श्री गणेशाय नमः ॥</p>
+
+          <h1 class="dev-title" lang="hi" data-words>गणेश दर्शन</h1>
+
+          <figure class="ganesh-frame temple">
+            <img
+              src="assets/ganesh-darshan.jpg"
+              width="640"
+              height="640"
+              alt="Lord Ganesha"
+            />
+
+            <span class="corner c1"></span>
+            <span class="corner c2"></span>
+            <span class="corner c3"></span>
+            <span class="corner c4"></span>
+          </figure>
+
+          <div class="diya-row center">
+            <span class="diya"><i class="flame"></i><i class="lamp"></i></span>
+            <span class="diya small"
+              ><i class="flame"></i><i class="lamp"></i
+            ></span>
+            <span class="diya"><i class="flame"></i><i class="lamp"></i></span>
+          </div>
+
+          <blockquote class="shloka" lang="hi" data-words>
+            वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ। निर्विघ्नं कुरु मे देव
+            सर्वकार्येषु सर्वदा॥
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- WEDDING INVITATION -->
+      <section class="section palace" id="invitation">
+        <div class="pillar p-left"></div>
+        <div class="pillar p-right"></div>
+
+        <svg class="arch" viewBox="0 0 400 120">
+          <path
+            d="M20 120 V70 Q20 16 90 16 H310 Q380 16 380 70 V120"
+            fill="none"
+            stroke="#B98B43"
+            stroke-width="3"
+          />
+          <path
+            d="M40 120 V78 Q40 34 100 34 H300 Q360 34 360 78 V120"
+            fill="none"
+            stroke="#D9B66E"
+            stroke-width="1.2"
+          />
+          <circle cx="200" cy="42" r="6" fill="#B98B43" />
+        </svg>
+
+        <div class="wrap">
+          <article class="invite-card reveal">
+            <span class="flower f1"></span>
+            <span class="flower f2"></span>
+            <span class="flower f3"></span>
+            <span class="flower f4"></span>
+
+            <p class="dev-kicker" lang="hi" data-words>शुभ विवाह</p>
+            <p class="tracked" data-words>WEDDING INVITATION</p>
+
+            <div class="ornament"><span></span><i>♥</i><span></span></div>
+
+            <h2 class="script-names">
+              <span data-letters>Gaurav</span>
+              <em>&amp;</em>
+              <span data-letters>Rinki</span>
+            </h2>
+
+            <p class="invite-copy" data-words>
+              Together with their families, we cordially invite you to celebrate
+              the beginning of their forever.
+            </p>
+
+            <div class="ornament"><span></span><i>♥</i><span></span></div>
+
+            <p class="invite-date">11 December 2026 · Varmala · 10:00 PM</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- COUPLE -->
+      <section class="section marble" id="couple">
+        <div class="wrap">
+          <p class="eyebrow" lang="hi">वर और वधू</p>
+          <h2 class="serif-title reveal" data-words>The couple</h2>
+
+          <div class="couple-grid">
+            <article class="portrait-card reveal">
+              <p class="role">Groom</p>
+
+              <div class="portrait-frame">
+                <img
+                  data-photo="groom"
+                  src="assets/Gaurav.png"
+                  width="300"
+                  height="420"
+                  alt="Gaurav"
+                />
+              </div>
+
+              <h3 class="script-name" data-letters>Gaurav</h3>
+
+              <p class="lineage">
+                Son of Smt. Rajkumari<br />
+                &amp; Shri Mahesh Chand
+              </p>
+            </article>
+
+            <article class="portrait-card reveal">
+              <p class="role">Bride</p>
+
+              <div class="portrait-frame">
+              <img
+  data-photo="bride"
+  src="assets/rinki.png"
+  width="300"
+  height="420"
+  alt="Rinki"
+>
+              </div>
+
+              <h3 class="script-name" data-letters>Rinki</h3>
+
+              <p class="lineage">Daughter of Smt. Shashi Devi <br>
+               &amp; Shree Mahendra Singh</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- COUNTDOWN -->
+      <section class="section countdown-section" id="countdown">
+        <div class="fairy-lights"></div>
+        <div class="spark-field" id="count-sparks"></div>
+
+        <div class="wrap reveal">
+          <p class="eyebrow light" data-words>Until the varmala</p>
+
+          <h2 class="serif-title light">11 December 2026</h2>
+
+          <p class="count-note">10:00 PM IST · Varmala</p>
+
+          <div class="count-grid" id="count-grid">
+            <div class="count-box">
+              <strong id="days">00</strong>
+              <span>Days</span>
+            </div>
+
+            <div class="count-box">
+              <strong id="hours">00</strong>
+              <span>Hours</span>
+            </div>
+
+            <div class="count-box">
+              <strong id="minutes">00</strong>
+              <span>Minutes</span>
+            </div>
+
+            <div class="count-box">
+              <strong id="seconds">00</strong>
+              <span>Seconds</span>
+            </div>
+          </div>
+
+          <p class="count-status" id="count-status"></p>
+        </div>
+      </section>
+
+      <!-- WEDDING EVENTS -->
+      <section class="section events-section" id="events">
+        <div class="wrap">
+          <p class="eyebrow" lang="hi">उत्सव</p>
+          <h2 class="serif-title reveal" data-words>Eight sacred gatherings</h2>
+
+          <div class="event-grid">
+            <article class="event-card theme-lagan reveal">
+              <p class="event-index">01</p>
+              <h3>Lagan Sagai</h3>
+              <p class="hi" lang="hi">लगन सगाई</p>
+              <p class="when">9 December 2026 · 3:00 PM</p>
+              <p class="where">Shyam Vatika<br />Ganeshra Road, Mathura</p>
+            </article>
+
+            <article class="event-card theme-haldi reveal">
+              <p class="event-index">02</p>
+              <h3>Haldi</h3>
+              <p class="hi" lang="hi">हल्दी</p>
+              <p class="when">10 December 2026 · 11:00 AM</p>
+              <p class="where">Devipura – At Home</p>
+            </article>
+
+            <article class="event-card theme-mehndi reveal">
+              <p class="event-index">03</p>
+              <h3>Mehndi</h3>
+              <p class="hi" lang="hi">मेहंदी</p>
+              <p class="when">10 December 2026 · 3:00 PM</p>
+              <p class="where">Devipura – At Home</p>
+            </article>
+
+            <article class="event-card theme-chaak reveal">
+              <p class="event-index">04</p>
+              <h3>Chaak Bhaat</h3>
+              <p class="hi" lang="hi">चाक भात</p>
+              <p class="when">10 December 2026 · 9:00 PM</p>
+              <p class="where">Devipura – At Home</p>
+            </article>
+
+            <article class="event-card theme-baraat reveal">
+              <p class="event-index">05</p>
+              <h3>Baraat Prasthan</h3>
+              <p class="hi" lang="hi">बारात प्रस्थान</p>
+              <p class="when">11 December 2026 · 4:00 PM</p>
+              <p class="where">Mathura To Kosi</p>
+            </article>
+
+            <article class="event-card theme-varmala reveal">
+              <p class="event-index">06</p>
+              <h3>Varmala</h3>
+              <p class="hi" lang="hi">वरमाला</p>
+              <p class="when">11 December 2026 · 10:00 PM</p>
+              <p class="where">Kushi Garder, Kosi kalan</p>
+            </article>
+
+            <article class="event-card theme-vadhu reveal">
+              <p class="event-index">07</p>
+              <h3>Vadhu Aagman</h3>
+              <p class="hi" lang="hi">वधू आगमन</p>
+              <p class="when">12 December 2026 · 7:00 AM</p>
+              <p class="where">Devipura , Mathura</p>
+            </article>
+
+            <article class="event-card theme-sangeet reveal">
+              <p class="event-index">08</p>
+              <h3>Mahila Sangeet</h3>
+              <p class="hi" lang="hi">महिला संगीत</p>
+              <p class="when">13 December 2026 · To Be Confirmed</p>
+              <p class="where">Venue: Devipura , Mathura</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEVEN PHERAS -->
+      <section class="section royal" id="royal">
+        <div class="royal-veil"></div>
+        <div class="royal-petals" id="royal-petals"></div>
+
+        <div class="wrap royal-copy reveal">
+          <p class="bell-row"><i></i><i></i><i></i></p>
+
+          <p class="eyebrow light" data-words>Together in Tradition</p>
+
+          <h2 class="script-names light">
+            <span data-letters>Gaurav</span>
+            <em>&amp;</em>
+            <span data-letters>Rinki</span>
+          </h2>
+
+          <div class="ornament light"><span></span><i>♥</i><span></span></div>
+
+          <p class="royal-hi" lang="hi" data-words>
+            सात फेरों के पावन बंधन में, दो जीवन एक नई राह पर।
+          </p>
+        </div>
+      </section>
+
+      <!-- VENUES -->
+      <section class="section marble" id="venues">
+        <div class="wrap">
+          <p class="eyebrow">Where to join us</p>
+          <h2 class="serif-title reveal" data-words>The royal venues</h2>
+
+          <div class="venue-grid">
+            <article class="venue-card reveal">
+              <p class="role">Lagan Sagai</p>
+              <h3>Shyam Vatika</h3>
+              <p>Ganeshra Road, Mathura</p>
+              <p class="when">9 December 2026 · 3:00 PM</p>
+
+              <a
+                class="gold-btn"
+                href="https://maps.app.goo.gl/89Pveu4F5R3cWtQF7?g_st=awb"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open in Google Maps
+              </a>
+            </article>
+
+            <article class="venue-card reveal">
+              <p class="role">Haldi, Mehndi &amp; Chaak Bhaat</p>
+              <h3>Devipura – At Home</h3>
+              <p>10 December 2026</p>
+              <p class="when">11:00 AM · 3:00 PM · 9:00 PM</p>
+            </article>
+
+            <article class="venue-card reveal">
+              <p class="role">Baraat &amp; Varmala</p>
+              <h3>Bhatan, Kosi Kalan</h3>
+              <p>Mathura</p>
+              <p class="when">11 December 2026 · 12:00 PM &amp; 10:00 PM</p>
+
+              <a
+                class="gold-btn"
+                href="https://www.google.com/maps/search/?api=1&query=Bhatan+Kosi+Kalan+Mathura"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open in Google Maps
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CLOSING -->
+      <section class="section closing" id="closing">
+        <div class="royal-veil soft"></div>
+        <div class="shower" id="shower"></div>
+        <div class="spark-field" id="closing-sparks"></div>
+
+        <div class="wrap closing-copy reveal">
+          <div class="diya-row center">
+            <span class="diya"><i class="flame"></i><i class="lamp"></i></span>
+            <span class="diya"><i class="flame"></i><i class="lamp"></i></span>
+          </div>
+
+          <p class="eyebrow light" data-words>With love</p>
+
+          <h2 class="script-names light">
+            <span data-letters>Gaurav</span>
+            <em>&amp;</em>
+            <span data-letters>Rinki</span>
+          </h2>
+
+          <p class="royal-hi" lang="hi" data-words>
+            आप सभी सादर आमंत्रित हैं। आपका स्नेह और आशीर्वाद ही हमारे उत्सव की
+            शोभा है।
+          </p>
+
+          <button class="gold-btn solid" id="share-btn" type="button">
+            Share Invitation
+          </button>
+        </div>
+      </section>
+      <!-- WEDDING CONTACTS -->
+<section class="section contacts-section" id="contacts">
+
+    <div class="wrap">
+
+        <p class="eyebrow" lang="hi">संपर्क सूत्र</p>
+
+        <h2 class="serif-title reveal">
+            Contact Our Family
+        </h2>
+
+        <p class="contacts-subtitle">
+            For any assistance or information,
+            feel free to contact our family.
+            <br>
+            किसी भी जानकारी के लिए हमसे संपर्क करें।
+        </p>
+
+        <div class="contacts-grid">
+
+            <!-- CONTACT 1 -->
+            <article class="contact-card reveal">
+
+                <div class="contact-photo">
+                    <img src="assets/mahesh.png"
+                         alt="Family Contact">
+                </div>
+
+                <p class="role">Groom's Father</p>
+
+                <h3>Shri Mahesh Chand</h3>
+
+                <p class="contact-relation">
+                    Family Contact
+                </p>
+
+                <p class="contact-number">
+                    +91 9625964501
+                </p>
+
+                <a href="tel:+919625964501"
+                   class="call-btn">
+
+                    <span>☎</span> Call Now
+
+                </a>
+
+            </article>
+
+
+            <!-- CONTACT 2 -->
+            <article class="contact-card reveal">
+
+                <div class="contact-photo">
+                    <img src="assets/uttam.png"
+                         alt="Family Contact">
+                </div>
+
+                <p class="role">Groom's Fufa jii</p>
+
+                <h3>Shree Uttam Chand</h3>
+
+                <p class="contact-relation">
+                    Family Contact
+                </p>
+
+                <p class="contact-number">
+                    +91 9837109199
+                </p>
+
+                <a href="tel:+919837109199"
+                   class="call-btn">
+
+                    <span>☎</span> Call Now
+
+                </a>
+
+            </article>
+
+
+            <!-- CONTACT 3 -->
+            <article class="contact-card reveal">
+
+                <div class="contact-photo">
+                    <img src="assets/pritam.jpeg"
+                         alt="Family Contact">
+                </div>
+
+                <p class="role">Groom's Taau jii</p>
+
+                <h3>Shree Pritam singh</h3>
+
+                <p class="contact-relation">
+                    Family Contact
+                </p>
+
+                <p class="contact-number">
+                    +91 9958177491
+                </p>
+
+                <a href="tel:+919958177491"
+                   class="call-btn">
+
+                    <span>☎</span> Call Now
+
+                </a>
+
+            </article>
+
+        </div>
+
+        <div class="ornament">
+            <span></span>
+            <i>♥</i>
+            <span></span>
+        </div>
+
+        <p class="contacts-blessing" lang="hi">
+            आपका स्वागत है, आपका स्नेह ही हमारा सम्मान है।
+        </p>
+
+    </div>
+
+</section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+      <audio id="wedding-audio" loop preload="auto">
+  <source src="assets/wedding-song.mp3" type="audio/mpeg">
+</audio>
+    <script src="script.js"></script>
+  </body>
+
+</html>
