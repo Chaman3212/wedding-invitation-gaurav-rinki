@@ -95,7 +95,7 @@ function startObserver() {
 
 
 /* =========================================
-   OPENING - MUSIC UPDATED
+   OPENING - 2 SECOND AUTO CLOSE
 ========================================= */
 
 function setupOpening() {
@@ -111,8 +111,6 @@ function setupOpening() {
 
     closed = true;
 
-    // Automatic opening: attempt music playback
-    // Browser may block autoplay without user interaction
     if (!userClicked) {
       playMusic();
     }
@@ -134,7 +132,6 @@ function setupOpening() {
     }, reduceMotion ? 0 : 1100);
   }
 
-  // Envelope seal click
   if (envelope) {
     envelope.addEventListener("click", () => {
       userClicked = true;
@@ -143,7 +140,6 @@ function setupOpening() {
     });
   }
 
-  // Enter button click
   if (enter) {
     enter.addEventListener("click", () => {
       userClicked = true;
@@ -152,7 +148,6 @@ function setupOpening() {
     });
   }
 
-  // Automatically close opening screen after 2 seconds
   window.setTimeout(finish, 2000);
 }
 
@@ -195,68 +190,55 @@ function updateCountdown() {
 
 
 /* =========================================
-   MP3 MUSIC - UPDATED
+   MP3 MUSIC SYSTEM
 ========================================= */
 
 const weddingAudio = document.getElementById("wedding-audio");
+
+function updateMusicButton(isPlaying) {
+  const button = document.getElementById("music-btn");
+
+  if (!button) return;
+
+  button.setAttribute("aria-pressed", String(isPlaying));
+  button.classList.toggle("is-playing", isPlaying);
+
+  const label = button.querySelector(".music-label");
+
+  if (label) {
+    label.textContent = isPlaying ? "Pause" : "Tap for Music";
+  }
+}
 
 async function playMusic() {
   if (!weddingAudio) return;
 
   try {
     weddingAudio.volume = 0.6;
-
     await weddingAudio.play();
-
-    const button = document.getElementById("music-btn");
-
-    if (button) {
-      button.setAttribute("aria-pressed", "true");
-      button.classList.add("is-playing");
-
-      const label = button.querySelector(".music-label");
-
-      if (label) {
-        label.textContent = "Pause";
-      }
-    }
-
+    updateMusicButton(true);
   } catch (error) {
     console.log("Music autoplay blocked or failed:", error);
-
-    const button = document.getElementById("music-btn");
-
-    if (button) {
-      button.setAttribute("aria-pressed", "false");
-      button.classList.remove("is-playing");
-
-      const label = button.querySelector(".music-label");
-
-      if (label) {
-        label.textContent = "Tap for Music";
-      }
-    }
+    updateMusicButton(false);
   }
 }
+
+function pauseMusic() {
+  if (!weddingAudio) return;
+
+  weddingAudio.pause();
+  updateMusicButton(false);
+}
+
+
+/* =========================================
+   MUSIC ON USER INTERACTION
+========================================= */
+
 function enableMusicOnInteraction() {
   const startMusic = () => {
-    const audio = document.getElementById("wedding-audio");
-
-    if (!audio || !audio.paused) return;
-
-    audio.play()
-      .then(() => {
-        document.body.classList.add("music-playing");
-
-        const musicBtn = document.getElementById("music-btn");
-        if (musicBtn) {
-          musicBtn.textContent = "♫ Sound On";
-        }
-      })
-      .catch(() => {
-        // Browser ne autoplay block kiya hai.
-        // Agle user interaction par dobara try hoga.
-      });
+    if (!weddingAudio || !weddingAudio.paused) return;
+    playMusic();
   };
 
   window.addEventListener("scroll", startMusic, { passive: true });
@@ -266,24 +248,10 @@ function enableMusicOnInteraction() {
   window.addEventListener("wheel", startMusic, { passive: true });
 }
 
-function pauseMusic() {
-  if (!weddingAudio) return;
 
-  weddingAudio.pause();
-
-  const button = document.getElementById("music-btn");
-
-  if (button) {
-    button.setAttribute("aria-pressed", "false");
-    button.classList.remove("is-playing");
-
-    const label = button.querySelector(".music-label");
-
-    if (label) {
-      label.textContent = "Music";
-    }
-  }
-}
+/* =========================================
+   MUSIC BUTTON ON/OFF
+========================================= */
 
 function setupMusic() {
   const button = document.getElementById("music-btn");
@@ -303,7 +271,7 @@ function setupMusic() {
 
 
 /* =========================================
-   ORIGINAL TOAST FUNCTION
+   TOAST FUNCTION
 ========================================= */
 
 function toast(message) {
@@ -431,7 +399,7 @@ async function useUploadedPortraits() {
 
 
 /* =========================================
-   ORIGINAL INITIALIZATION - PRESERVED
+   INITIALIZATION
 ========================================= */
 
 document.querySelectorAll(".event-card").forEach((card, index) => {
@@ -450,7 +418,7 @@ splitText();
 
 setupOpening();
 setupMusic();
-enableMusicOnInteraction(); // NEW LINE
+enableMusicOnInteraction();
 setupShare();
 setupNav();
 setupProgress();
