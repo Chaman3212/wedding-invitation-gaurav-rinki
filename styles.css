@@ -1138,3 +1138,48 @@ body.is-opening .petal-layer { opacity: 0; }
     }
 
 }
+
+/* FIX: Gaurav & Rinki mobile single-line name */
+
+.script-names {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    width: 100%;
+    max-width: 100%;
+    gap: 8px;
+}
+
+.script-names > span {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.script-names .char {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.script-names em {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+    .script-names {
+        font-size: clamp(2.5rem, 10vw, 3.6rem);
+        gap: 5px;
+        letter-spacing: -1px;
+    }
+}
+
+@media (max-width: 380px) {
+    .script-names {
+        font-size: 2.35rem;
+        gap: 4px;
+    }
+}
